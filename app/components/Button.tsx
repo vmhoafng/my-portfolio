@@ -12,6 +12,7 @@ const Button: React.FC<ButtonProps> = ({ type, href, children, isLink }) => {
   const handleClick = () => {
     if (!isLink) {
       router.push(`/${href}`);
+      return;
     }
   };
   return (
@@ -23,7 +24,8 @@ const Button: React.FC<ButtonProps> = ({ type, href, children, isLink }) => {
          items-center
          gap-3
          px-4 
-         py-2 
+         py-2
+         w-fit 
          text-white
          outline 
          outline-2 

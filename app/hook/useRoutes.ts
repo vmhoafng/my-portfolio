@@ -24,12 +24,6 @@ const useRoutes = () => {
         active: pathname === "/projects",
       },
       {
-        label: "skills",
-        href: "skills",
-        icon: AiFillCode,
-        active: pathname === "/skills",
-      },
-      {
         label: "about-me",
         href: "about",
         icon: AiFillInfoCircle,

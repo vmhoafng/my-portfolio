@@ -48,6 +48,7 @@ const DesktopItem: React.FC<DesktopItemProps> = ({
             items-center 
             space-x-1 
             cursor-pointer 
+            font-medium
             hover:text-white 
             duration-300`,
             active ? "text-white" : "text-gray"

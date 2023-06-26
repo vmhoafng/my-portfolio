@@ -6,10 +6,11 @@ interface ProjectCardProps {
   title: string;
   languages: Array<string>;
   description: string;
-  image: string;
+  image?: string;
   href?: string;
   buttonContent?: string;
   isLink?: boolean;
+  hasImage?: boolean;
 }
 const ProjectCard: React.FC<ProjectCardProps> = ({
   title,
@@ -19,6 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
   href,
   buttonContent,
   isLink,
+  hasImage = false,
 }) => {
   return (
     <div
@@ -28,15 +30,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         border-gray 
         border"
     >
-      <div className="h-64 relative bg-gray">
-        <Image
-          alt="project-image"
-          src={image || "/images/placeholder.webp"}
-          fill
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          className=" border-gray border object-cover"
-        />
-      </div>
+      {hasImage && (
+        <div className="h-64 relative bg-gray">
+          <Image
+            alt="project-image"
+            src={image || "/images/placeholder.webp"}
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className=" border-gray border object-cover"
+          />
+        </div>
+      )}
       <ul
         className="
         border-gray 
@@ -60,7 +64,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
           gap-4 
           p-4"
       >
-        <div className="text-2xl text-white">{title}</div>
+        <div className="text-2xl font-medium text-white">{title}</div>
         <div className="text-gray">{description}</div>
         <div>
           <Button type="button" href={href} isLink={isLink}>

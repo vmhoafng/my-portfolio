@@ -4,8 +4,8 @@ import MobileFooter from "./MobileFooter";
 
 const Footer = () => {
   return (
-    <div>
-      <hr className="block h-[1px] border-t-[1px] border-gray"/>
+    <div className="bg-background">
+      <hr className="block h-[1px] border-t-[1px] border-gray" />
       <div className="py-8">
         <MobileFooter />
         <DesktopFooter />

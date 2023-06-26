@@ -26,6 +26,7 @@ const Button: React.FC<ButtonProps> = ({ type, href, children, isLink }) => {
          px-4 
          py-2
          w-fit 
+         font-medium
          text-white
          outline 
          outline-2 

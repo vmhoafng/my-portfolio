@@ -1,3 +1,4 @@
+import Footer from "../components/footer/Footer";
 import Navigation from "../components/navigation/Navigation";
 
 export default async function ConversationsLayout({
@@ -6,8 +7,10 @@ export default async function ConversationsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="h-full">
-      <Navigation>{children}</Navigation>
+    <div className="bg-background">
+      <Navigation />
+      {children}
+      <Footer />
     </div>
   );
 }

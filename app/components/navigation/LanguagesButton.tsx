@@ -54,7 +54,8 @@ const LanguagesButton = () => {
                 text-gray
                 hover:text-white
                 transition
-                duration-300"
+                duration-300
+                cursor-pointer"
             >
               {language}
             </Listbox.Option>
